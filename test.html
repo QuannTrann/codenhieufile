@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>How to Make a Popup</title>
+    <link rel="stylesheet" href="ts.css" />
+    <script defer src="ani.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <input type="number" id="name" />
+      <br />
+      <button type="submit" class="btn" onclick="openPopup()">Submit</button>
+      <div class="popup" id="popup">
+        <img src="img/tick.png" alt="" />
+        <h2>Thank You!</h2>
+        <div>
+          <p id="loichuc"></p>
+          <script>
+            document
+              .getElementById("name")
+              .addEventListener("input", function () {
+                var pass = this.value;
+                if (pass == 1) {
+                  document.getElementById("loichuc").innerHTML = "Hello ly";
+                } else {
+                  document.getElementById("loichuc").innerHTML = "hello";
+                }
+              });
+          </script>
+        </div>
+        <button type="button" onclick="closePopup()">OK</button>
+      </div>
+    </div>
+  </body>
+</html>
